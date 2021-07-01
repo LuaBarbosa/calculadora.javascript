@@ -3,6 +3,10 @@
   background-color: Cornsilk;
 }
 
+.corpoInicio img {
+  padding: 100px;
+  margin-left: 25%;
+}
 .cabecalho {
   color: Peru;
   background-color: LemonChiffon;

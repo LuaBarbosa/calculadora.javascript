@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cadastro de Anuncios - Empresa Divulga Tudo</title>
     <link href="style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
@@ -21,19 +21,25 @@
     </div>
     <div class="cadastro">
       <h1>Cadastro de Anúncios</h1>
-      <form>
+      <form id="form">
         <label for="anuncio">Nome do Anúncio:</label>
-        <input />
+        <input type="text" id="anuncio" />
+        <span class="msg-erro msg-nome"></span>
         <label for="cliente">Cliente:</label>
-        <input />
+        <input type="text" id="cliente" />
+        <span class="msg-erro msg-nome"></span>
         <label for="início">Data de Início</label>
-        <input />
+        <input type="date" id="inicio" />
+        <span class="msg-erro msg-nome"></span>
         <label for="termino">Data de Término:</label>
-        <input />
+        <input type="date" id="termino" />
+        <span class="msg-erro msg-nome"></span>
         <label for="investimento">Investimento por Dia:</label>
-        <input />
-        <button>Cadastrar</button>
+        <input type="number" id="investimento" />
+        <span class="msg-erro msg-nome"></span>
+        <input id="submit" type="submit" />
       </form>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

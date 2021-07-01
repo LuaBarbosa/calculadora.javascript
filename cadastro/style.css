@@ -57,3 +57,7 @@
   width: 80px;
   margin: auto;
 }
+
+.relatorio table {
+  border: 1px solid black;
+}

@@ -66,6 +66,8 @@
   border-collapse: collapse;
   background: #fffff0;
   margin: 50px 25%;
+  font-family: "Poppins";
+  font-size: 15px;
 }
 
 .tabela td {
@@ -75,4 +77,24 @@
 .tabela th {
   border: 1px solid black;
   background: #f0fff0;
+}
+
+.tabCal {
+  border: 1px solid peru;
+  border-radius: 10px;
+  padding: 30px;
+  font-family: "Poppins";
+  color: peru;
+  font-size: 15px;
+  margin: 50px 25%;
+}
+
+.tabCal input {
+  border-radius: 5px;
+  border: 1px solid peru;
+}
+
+.tabCal button {
+  font-family: "Poppins";
+  color: black;
 }

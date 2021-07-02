@@ -1,46 +1,49 @@
-const form = document.getElementById("form");
+const form = document.querySelector("form");
 const submit = document.getElementById("submit");
+
+const anuncio = document.getElementById("anuncio");
+const cliente = document.getElementById("cliente");
+const inicio = document.getElementById("inicio");
+const termino = document.getElementById("termino");
+const investimento = document.getElementById("investimento");
 
 //evento que dispara as validações
 if (form.addEventListener) {
-  form.addEventListener("submit", validar);
-} else if (form.attachEvent) {
-  form.attachEvent("onsubmit", validar);
-}
+	form.addEventListener("submit", validar);
+  } else if (form.attachEvent) {
+	form.attachEvent("onsubmit", validar);
+  }
+  
+  function validar() {
+	var anuncio = document.getElementById("anuncio");
+	var cliente = document.getElementById("cliente");
+	var inicio = document.getElementById("inicio");
+	var termino = document.getElementById("termino");
+	var investimento = document.getElementById("investimento");
+  
+	if (
+	  anuncio.value == "" ||
+	  cliente.value == "" ||
+	  inicio.value == "" ||
+	  termino.value == "" ||
+	  investimento.value == ""
+	) {
+	  alert("Favor preencher todos os campos!!");
+	  erro += 1;
+	} else {
+	  alert("Cadastro criado com sucesso!!");
+	}
+  
 
-function validar() {
-  var anuncio = document.getElementById("anuncio");
-  var cliente = document.getElementById("cliente");
-  var inicio = document.getElementById("inicio");
-  var termino = document.getElementById("termino");
-  var investimento = document.getElementById("investimento");
-  var erro = "";
+  //adicionando um cadastro
+  const anuncioTd = document.createElement("td");
+  const textoAnuncio = anuncio.nodeValue;
+  anuncioTd.appendChild(textoAnuncio);
 
-  if (anuncio.value == "") {
-    alert("Favor preencher com o nome do anuncio");
-    erro += 1;
-  } else {
-  }
-  if (cliente.value == "") {
-    alert("Favor preencher com o nome do Cliente");
-    erro += 1;
-  } else {
-  }
-  if (inicio.value == "") {
-    alert("Favor preencher a data de inicio");
-    erro += 1;
-  } else {
-  }
-  if (termino.value == "") {
-    alert("Favor preencher a data de termino");
-    erro += 1;
-  } else {
-  }
+  const clienteTd = document.createElement("td");
+  const textoCliente = cliente.nodeValue;
+  clienteTd.appendChild(textoCliente);
 
-  if (investimento.value == "") {
-    alert("Favor preencher o valor a ser investido no dia");
-    erro += 1;
-  } else {
-    alert("Cadastro criado com sucesso!!");
-  }
-}
+  const tabela = document.getElementById("tabela");
+  document.body.insertBefore(anuncioTd, clienteTd, tabela);
+});

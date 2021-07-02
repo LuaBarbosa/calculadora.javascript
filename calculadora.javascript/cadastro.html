@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Anuncios - Empresa Divulga Tudo</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet "
+    />
+  </head>
+  <body>
+    <div class="cabecalho">
+      <h2>Agência Divulga Tudo</h2>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="relatorio.html">Relátorios</a></li>
+      </ul>
+    </div>
+    <div class="cadastro">
+      <h1>Cadastro de Anúncios</h1>
+      <form id="form">
+        <label for="anuncio">Nome do Anúncio:</label>
+        <input type="text" id="anuncio" />
+        <span class="msg-erro msg-nome"></span>
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" />
+        <span class="msg-erro msg-nome"></span>
+        <label for="início">Data de Início</label>
+        <input type="date" id="inicio" />
+        <span class="msg-erro msg-nome"></span>
+        <label for="termino">Data de Término:</label>
+        <input type="date" id="termino" />
+        <span class="msg-erro msg-nome"></span>
+        <label for="investimento">Investimento por Dia:</label>
+        <input type="number" id="investimento" />
+        <span class="msg-erro msg-nome"></span>
+        <input id="submit" type="submit" />
+      </form>
+    </div>
+    <div class="tabela">
+      <table>
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Tempo do anuncio</th>
+            <th>Valor Investido</th>
+            <th>Quantidade de Visualizações</th>
+            <th>Quantidade de Compartilhamento</th>
+            <th>Quantidade de cliques</th>
+          </tr>
+        </thead>
+        <tbody id="tabela"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
